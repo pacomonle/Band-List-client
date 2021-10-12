@@ -1,5 +1,11 @@
 # npm i socket.io-client -> trabajar sockets de parte del cliente
 
+# git tag (listar versiones)
+
+# git tag -a v1.0.0 -m "primera version"
+
+# git push --tags (para subirlo al repo)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

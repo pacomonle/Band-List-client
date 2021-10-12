@@ -1,8 +1,18 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { SocketContext } from '../context/SocketContext';
+;
 
-const BandAdd = ({crearBanda}) => {
+const BandAdd = () => {
+
+    const { socket } = useContext(SocketContext)
 
     const [valor, setvalor] = useState('');
+
+    const crearBanda = (nombre) => {
+       // console.log(nombre)
+        socket.emit('crear-banda', { nombre })
+      }
+    
 
     const onsubmit = (ev) =>{
         ev.preventDefault()
@@ -20,7 +30,7 @@ const BandAdd = ({crearBanda}) => {
                 <input 
                     className='form-control'
                     type="text"  
-                    placeholder='Nuevo nombre de banda'S
+                    placeholder='Nuevo nombre de banda'
                     value={valor}
                     onChange={ (e)=> setvalor(e.target.value)  }
                 />
