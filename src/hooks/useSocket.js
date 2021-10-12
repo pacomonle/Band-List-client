@@ -6,6 +6,8 @@ export const useSocket = (serverPath) => {
     const socket = useMemo(() => io.connect(serverPath, {
         transports: ['websocket']
     }), [serverPath]);
+
+    console.log('socket', socket)
     const [online, setOnline] = useState(false);
 
     useEffect(() => {
@@ -19,7 +21,6 @@ export const useSocket = (serverPath) => {
 
         return () => {
             // socket.disconnect()
-            socket.disconnect();
         }
 
     }, [socket])

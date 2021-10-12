@@ -1,5 +1,7 @@
 # npm i socket.io-client -> trabajar sockets de parte del cliente
 
+# npm i chart.js -> garficas en javascript
+
 # git tag (listar versiones)
 
 # git tag -a v1.0.0 -m "primera version"
